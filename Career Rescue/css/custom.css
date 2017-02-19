@@ -1,0 +1,18 @@
+﻿/*Changes Carousel Header text by Deron Kosloski 2-15-2017*/
+html > /**/ body .carousel
+
+  h1 {
+      color: #010101 !important;
+  	  font-family: "Times New Roman", Times, serif !important;
+  	  font-size: 40px !important;
+  
+  }
+/*modifies for h2 headings dbk 2/15/17*/
+.carousel
+h2 {
+    background-color: transparent;
+    text-align: right;
+    color: #010101 !important;
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 75px !important;
+ }

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en" role="main">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Career Rescue - @ViewBag.Title</title>
+
+    <!-- Bootstrap -->
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/custom.css")" rel="stylesheet">                        <!-- Added by Deron Kosloski 2/15/17 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="The description of my page" />
+
+    
+</head>
+<body>
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                @Html.ActionLink("Career Rescue", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="about">
+                       @Html.ActionLink("About", "Index", "About")
+                    </li>
+                    <li id="services">
+                        @Html.ActionLink("Services", "Index", "Services")
+                    </li>
+                    <li id="contact">
+                        @Html.ActionLink("Contact", "Index", "Contact")
+                    </li>
+                    
+                   
+                    <li id="Membership" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Membership <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="fullwidthpage">
+                                @Html.ActionLink("Members", "Members", "Membership")
+                            </li>
+                            
+                            <li id="faq">
+                                @Html.ActionLink("Employers", "Employers", "Membership")
+                            </li>
+                            
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    @RenderBody()
+
+    <div class="container">
+
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Deron B. Kosloski 2017</p>
+                </div>
+            </div>
+            
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="@Url.Content("/js/bootstrap.js")"></script>
+    <script src="@Url.Content("/js/modern-business.js")"></script>
+    <!--- Secure Site Seal - DO NOT EDIT --->
+    <span id="ss_img_wrapper_115-55_image_en"><a href="http://www.alphassl.com/ssl-certificates/wildcard-ssl.html" target="_blank" title="SSL Certificates"><img alt="Wildcard SSL Certificates" border=0 id="ss_img" src="//seal.alphassl.com/SiteSeal/images/alpha_noscript_115-55_en.gif" title="SSL Certificate"></a></span>
+    <script type="text/javascript" src="//seal.alphassl.com/SiteSeal/alpha_image_115-55_en.js"></script>
+    <!--- Secure Site Seal - DO NOT EDIT --->
+
+    
+</body>
+</html>

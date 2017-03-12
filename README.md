@@ -15,3 +15,8 @@ on a Database first system.
 As noted above the database issue was resolved, but not sure if there is time to complete all of the above items. 
 Currently the requirements for the project have been met, but they are not exactly the way it was planned.
 These issues can be resolved at a latter date. But if enough time is left an attempt to resolve the issue before 3/19 will be made.
+
+
+
+
+Deron B Kosloski

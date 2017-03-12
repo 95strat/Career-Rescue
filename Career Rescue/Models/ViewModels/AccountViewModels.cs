@@ -152,7 +152,7 @@ namespace Career_Rescue.ViewModels
         [Display(Name = "Website")]
         public string website { get; set; }
 
-        public string status { get; set; }
+        
 
        /* internal string ToString(DateTime now)
         {

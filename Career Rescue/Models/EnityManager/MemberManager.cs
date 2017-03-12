@@ -2,9 +2,7 @@
 using System.Linq;
 using Career_Rescue.Models.DB;
 using Career_Rescue.ViewModels;
-
-
-
+using System.Data.Entity.Validation;
 
 namespace Career_Rescue.Models.EnityManager
 {
@@ -15,12 +13,12 @@ namespace Career_Rescue.Models.EnityManager
             using (CareerRescueEntities db = new CareerRescueEntities())
             {
                 Member MBR = new Member();
-
+                Random a = new Random();
+                MBR.Member_id = member.Member_id > 0 ? member.Member_id : a.Next(); //1
+                                   
                 MBR.Email = member.Email;
                 MBR.Password = member.Password;
-
-                MBR.Member_id = member.Member_id > 0 ? member.Member_id : 1;
-
+                
                 MBR.firstName = member.firstName;
                 MBR.middleName = member.middleName;
                 MBR.lastName = member.lastName;
@@ -37,7 +35,26 @@ namespace Career_Rescue.Models.EnityManager
                 //MBR.status = member.ToString(DateTime.Now);
 
                 db.Members.Add(MBR);
-                db.SaveChangesAsync();
+                try
+                {
+                    
+                    db.SaveChanges();
+
+                }
+                catch (DbEntityValidationException e)
+                {
+                    foreach (var eve in e.EntityValidationErrors)
+                    {
+                        Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                            eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage);
+                        }
+                    }
+                    //throw;
+                }
 
             }
         }

@@ -51,7 +51,7 @@ namespace Career_Rescue.Controllers
                 if (!EM.IsLoginNameExist(ESV.Email))
                 {
                     EM.AddEmployerAccount(ESV);
-                    FormsAuthentication.SetAuthCookie(ESV.companyName, false);
+                    FormsAuthentication.SetAuthCookie(ESV.contactName, false);
                     return RedirectToAction("Welcome", "Home");
 
                 }

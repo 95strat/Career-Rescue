@@ -14,7 +14,7 @@ namespace Career_Rescue.Models.EnityManager
             {
                 Member MBR = new Member();
                 Random a = new Random();
-                MBR.Member_id = member.Member_id > 0 ? member.Member_id : a.Next(); //1
+                MBR.Member_id = member.Member_id < 0 ? member.Member_id : a.Next(); //1
                                    
                 MBR.Email = member.Email;
                 MBR.Password = member.Password;
@@ -30,7 +30,7 @@ namespace Career_Rescue.Models.EnityManager
                 MBR.Gender = member.Gender;
                 MBR.Experience = member.Experience;
                 MBR.Skills = member.Skills;
-                MBR.Resume = member.Resume;
+               // MBR.Resume = member.Resume;
 
                 //MBR.status = member.ToString(DateTime.Now);
 

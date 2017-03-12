@@ -113,8 +113,8 @@ namespace Career_Rescue.ViewModels
         [Display(Name = "Skills")]
         public string Skills { get; set; }
 
-        [Display(Name = "Resume")]
-        public string Resume { get; set; }
+       /* [Display(Name = "Resume")]
+        public string Resume { get; set; }*/
 
        /* internal string ToString(DateTime now)
         {

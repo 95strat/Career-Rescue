@@ -15,7 +15,7 @@ namespace Career_Rescue.Models.EnityManager
                 Employer EMP = new Employer();
                 Random b = new Random();
                 
-                EMP.Employer_id = employer.Employer_id > 0 ? employer.Employer_id : b.Next(); //1
+                EMP.Employer_id = employer.Employer_id < 0 ? employer.Employer_id : b.Next(); //1
                 EMP.Email = employer.Email;
                 EMP.Password = employer.Password;
                 EMP.companyName = employer.companyName;

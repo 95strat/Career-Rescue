@@ -166,6 +166,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CounselingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MembershipController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
@@ -293,6 +294,7 @@
     <Content Include="Views\Topics\Age.cshtml" />
     <Content Include="Views\Topics\Disability.cshtml" />
     <Content Include="Views\Topics\Background.cshtml" />
+    <Content Include="Views\Counseling\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

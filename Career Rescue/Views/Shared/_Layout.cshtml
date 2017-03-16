@@ -51,6 +51,18 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
 
+                    <li id="Counseling">
+                        @Html.ActionLink("Counseling", "Index", "Counseling")
+                    </li>
+
+                    <li id="about">
+                        @Html.ActionLink("About", "Index", "About")
+                    </li>
+
+                    <li id="contact">
+                        @Html.ActionLink("Contact", "Index", "Contact")
+                    </li>
+
                     <li id="Topics" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -66,30 +78,23 @@
                                 @Html.ActionLink("Background Checks", "Background", "Topics")
                             </li>
                         </ul>
-                   </li>
-                     <li id="about">
-                        @Html.ActionLink("About", "Index", "About")
                     </li>
 
-                    <li id="contact">
-                        @Html.ActionLink("Contact", "Index", "Contact")
+                    <li id="Membership" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Membership <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="MemberHome">
+                                @Html.ActionLink("Member Home", "MemberHome", "Membership")
+                            </li>
+
+                            <li id="EmployerHome">
+                                @Html.ActionLink("Employer Home", "EmployerHome", "Membership")
+                            </li>
+
+
+                        </ul>
                     </li>
-
-                 <li id="Membership" class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Membership <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                         <li id="MemberHome">
-                              @Html.ActionLink("Member Home", "MemberHome", "Membership")
-                         </li>
-
-                         <li id="EmployerHome">
-                              @Html.ActionLink("Employer Home", "EmployerHome", "Membership")
-                         </li>
-
-
-                    </ul>
-                 </li>
-            </ul>
+                </ul>
 </div>
             <!-- /.navbar-collapse -->
         </div>
